@@ -22,10 +22,16 @@ def main():
             dir_list.append(os.path.join(root,dir))
 
         for f in file_names:
-            file_list.append(f)
+            file_list.append(os.path.join(root,f))
 
-    print("************************ Directory Listing ************************\n", dir_list, "\n************************************************")
-    print("************************ File List ************************\n",file_list,"\n************************************************")
+    print("************************ Directory Listing ************************")
+    for dir in dir_list:
+        print(dir)
+    print("*******************************************************************")
+    print("**************************** File List ****************************")
+    for file in file_list:
+        print(file)
+    print("*******************************************************************")
 
     
 
